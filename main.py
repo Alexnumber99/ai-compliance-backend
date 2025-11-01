@@ -52,11 +52,10 @@ class AnalysisResult(BaseModel):
     The `details` field can contain arbitrary JSON‑serialisable
     data such as lists (e.g., flagged terms) and strings (e.g., recommendations).
     """
-
     file_id: str
     summary: str
     risk_score: float
-    details: Dict[str, any]
+    details: Dict[str, Any]
 
 
 def extract_text_from_pdf(data: bytes) -> str:
